@@ -93,7 +93,7 @@
       font-size: clamp(14px, 2.2vw, 17px);
       color: rgba(255,255,255,0.6);
       font-weight: 300;
-      margin-bottom: 48px;
+      margin-bottom: 0;
       line-height: 1.7;
     }
 
@@ -122,9 +122,9 @@
     }
 
     .hero-cta-area {
-      margin-top: 48px;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+      padding-top: 0;
+      border-top: none;
     }
 
     .hero-cta-text {
@@ -139,6 +139,26 @@
       font-size: 14px;
       color: rgba(255,255,255,0.5);
       margin-bottom: 28px;
+    }
+
+    /* ===== PAIN POINTS ===== */
+    .pain-section {
+      background: #222228;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .pain-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 32px;
+    }
+
+    .pain-lead {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 24px;
     }
 
     /* ===== SECTIONS ===== */
@@ -722,15 +742,19 @@
       }
 
       .hero-cta-area {
-        margin-top: 36px;
-        padding-top: 28px;
-      }
-
-      .hero-cta-text {
-        font-size: 18px;
+        margin-top: 32px;
       }
 
       .hero-cta-text br { display: none; }
+
+      /* Pain points */
+      .pain-inner {
+        padding: 36px 20px;
+      }
+
+      .pain-lead {
+        font-size: 16px;
+      }
 
       .cta-buttons {
         flex-direction: column;
@@ -868,6 +892,10 @@
         padding: 44px 16px;
       }
 
+      .pain-inner {
+        padding: 32px 16px;
+      }
+
       .persona-header h4 {
         font-size: 14px;
       }
@@ -895,25 +923,27 @@
       <h1>家賃20万円以上の審査否決案件を、<br><span class="gold">成約に変える。</span></h1>
       <p class="hero-sub">高単価案件レスキュー窓口</p>
 
-      <p style="font-size:15px; color:rgba(255,255,255,0.75); margin-bottom:28px; font-weight:400;">
-        その案件、まだ終わっていません。
-      </p>
+      <div class="hero-cta-area">
+        <p class="hero-cta-text">弊社の「社宅代行×転貸スキーム」で、<br>審査通過の可能性を最大化します。</p>
+        <p class="hero-cta-desc">仲介手数料は100%貴社へ残ります。弊社の仕組みをご活用いただくことで利幅が減少することはございません。</p>
+        <div class="cta-buttons">
+          <a href="https://lin.ee/5vv7ViN" class="btn btn-primary" target="_blank"><span class="btn-icon">💬</span> 公式LINEで即時相談</a>
+          <a href="https://growth-property.jp/contact" class="btn btn-secondary" target="_blank">フォームから相談 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- PAIN POINTS -->
+  <div class="pain-section">
+    <div class="pain-inner">
+      <p class="pain-lead">その案件、まだ終わっていません。</p>
       <ul class="hero-list">
         <li>フリーランスで所得証明が弱く、審査NG</li>
         <li>「外国籍」と伝えた瞬間、管理会社に断られた</li>
         <li>過去に信用情報の事故歴があり、保証会社が通らない</li>
         <li>家賃20万円以上の高単価案件が宙に浮いている</li>
       </ul>
-
-      <div class="hero-cta-area">
-        <p class="hero-cta-text">弊社の「社宅代行×転貸スキーム」で、<br>審査通過の可能性を最大化します。</p>
-        <p class="hero-cta-desc">仲介手数料は100%貴社に帰属。貴社の案件を、貴社の成約にします。</p>
-        <div class="cta-buttons">
-          <a href="https://lin.ee/5vv7ViN" class="btn btn-primary" target="_blank"><span class="btn-icon">💬</span> 公式LINEで即時相談</a>
-          <a href="https://growth-property.jp/contact" class="btn btn-secondary" target="_blank">フォームから相談 →</a>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -1112,14 +1142,14 @@
 
   <!-- PROMISES -->
   <section class="fade-up">
-    <div class="section-label">Promise</div>
-    <h2 class="section-title">仲介会社様への3つの約束</h2>
+    <div class="section-label">For Partners</div>
+    <h2 class="section-title">仲介会社様にご安心いただくために</h2>
 
     <div class="promises-grid">
       <div class="promise-card">
         <div class="promise-icon">💰</div>
-        <h4>仲介手数料は<br>100%貴社に帰属</h4>
-        <p>弊社が仲介ポジションを奪うことは一切ありません。貴社の案件は、貴社の成約です。</p>
+        <h4>仲介手数料は<br>貴社へ100%</h4>
+        <p>弊社は仲介業を営んでいないため、仲介ポジションを奪うことは一切ありません。仲介手数料はそのままお受け取りいただけます。</p>
       </div>
       <div class="promise-card">
         <div class="promise-icon">🔒</div>
@@ -1255,7 +1285,8 @@
           <div class="faq-answer">
             <div class="faq-answer-inner">
               案件ごとに最適な方法を選択しております。保証会社利用・管理会社との直接協議・与信提示による調整など、柔軟に対応いたします。<br><br>
-              入居者と弊社の間では、<strong>Casa・日本セーフティー・フォーシーズ・GTN</strong>等の独立系保証会社を活用しております。
+              入居者と弊社の間では、<strong>Casa・日本セーフティー・フォーシーズ・GTN</strong>等の独立系保証会社を活用しております。<br>
+              上記の保証会社が通らなかった場合は個別相談が可能です。
             </div>
           </div>
         </div>
