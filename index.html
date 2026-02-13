@@ -194,6 +194,39 @@
       z-index: 2;
     }
 
+    /* Hero scheme explainer box */
+    .hero-scheme-box {
+      margin-top: 48px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 36px 32px 32px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-scheme-headline {
+      font-family: var(--serif);
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .hero-scheme-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-scheme-box .cta-row {
+      gap: 10px;
+    }
+
     .scroll-line {
       width: 1px;
       height: 48px;
@@ -271,20 +304,126 @@
       line-height: 1.7;
     }
 
+    /* Pain closing message */
+    .pain-closing {
+      margin-top: 40px;
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .pain-closing-lead {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .pain-closing-answer {
+      font-family: var(--serif);
+      font-size: clamp(17px, 2.8vw, 22px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
     /* =========================================
-       SCHEME DIAGRAM — Visual infographic
+       MECHANISM — Story + Diagram
        ========================================= */
-    .diagram-section {
+    .mechanism-section {
       background: var(--surface);
       padding: 80px 32px;
       color: var(--ink);
     }
 
-    .diagram-inner {
+    .mechanism-inner {
       max-width: 960px;
       margin: 0 auto;
     }
 
+    .mechanism-lead {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.9;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .mechanism-lead strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .mechanism-diagram-area {
+      background: var(--white);
+      border: 1px solid #e8e6e0;
+      border-radius: 20px;
+      padding: 32px 24px 24px;
+      margin-bottom: 48px;
+    }
+
+    .mechanism-diagram-label {
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: #999;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    /* SVG Diagram */
+    .diagram-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .diagram-wrap svg {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Key points below diagram */
+    .mechanism-points {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mechanism-point {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid #e8e6e0;
+      border-radius: 12px;
+    }
+
+    .mechanism-point-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold-dim);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .mechanism-point strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .mechanism-point p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ===== Shared section typography ===== */
     .sec-label {
       font-size: 11px;
       letter-spacing: 0.15em;
@@ -302,50 +441,6 @@
       text-align: center;
       line-height: 1.4;
       margin-bottom: 48px;
-    }
-
-    /* SVG Diagram */
-    .diagram-wrap {
-      max-width: 780px;
-      margin: 0 auto 40px;
-    }
-
-    .diagram-wrap svg {
-      width: 100%;
-      height: auto;
-    }
-
-    .diagram-notes {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    .diagram-note {
-      text-align: center;
-      padding: 20px 16px;
-      background: var(--white);
-      border-radius: 10px;
-      border: 1px solid #e8e6e0;
-    }
-
-    .diagram-note-icon {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .diagram-note strong {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
-
-    .diagram-note span {
-      font-size: 12px;
-      color: #888;
-      line-height: 1.6;
     }
 
     /* =========================================
@@ -835,7 +930,15 @@
 
       .sec-title { font-size: 22px; }
 
-      .diagram-notes { grid-template-columns: 1fr; gap: 10px; }
+      .mechanism-section { padding: 56px 20px; }
+      .mechanism-diagram-area { padding: 20px 12px 16px; }
+      .mechanism-point { grid-template-columns: 40px 1fr; gap: 12px; padding: 20px; }
+      .mechanism-point-icon { width: 40px; height: 40px; font-size: 18px; }
+
+      .hero-scheme-box { padding: 28px 20px 24px; }
+      .hero-scheme-headline { font-size: 18px; }
+
+      .diagram-wrap svg { min-height: 200px; }
 
       .route-compare {
         grid-template-columns: 1fr;
@@ -864,6 +967,7 @@
       .pain-card { padding: 20px 14px; }
 
       .diagram-section,
+      .mechanism-section,
       .route-section,
       .persona-section,
       .promises-section,
@@ -903,9 +1007,14 @@
         </div>
       </div>
 
-      <div class="cta-row">
-        <a href="https://lin.ee/5vv7ViN" class="btn btn-gold" target="_blank">💬 公式LINEで即時相談</a>
-        <a href="https://growth-property.jp/contact" class="btn btn-ghost" target="_blank">フォームから相談 →</a>
+      <!-- Scheme explainer box -->
+      <div class="hero-scheme-box">
+        <p class="hero-scheme-headline">「社宅代行 × 転貸スキーム」で<br>審査通過の可能性を最大化</p>
+        <p class="hero-scheme-note">※御社の仲介手数料を増加させます</p>
+        <div class="cta-row">
+          <a href="https://lin.ee/5vv7ViN" class="btn btn-gold" target="_blank">● LINEで即時相談</a>
+          <a href="https://growth-property.jp/contact" class="btn btn-ghost" target="_blank">フォームから相談</a>
+        </div>
       </div>
     </div>
     <div class="hero-scroll"><div class="scroll-line"></div></div>
@@ -914,7 +1023,7 @@
   <!-- ========== PAIN POINTS ========== -->
   <div class="pain">
     <div class="pain-inner">
-      <h2 class="pain-title">その案件、まだ終わっていません。</h2>
+      <h2 class="pain-title">こんな案件で止まっていませんか？</h2>
       <div class="pain-grid stagger">
         <div class="pain-card">
           <div class="pain-x">×</div>
@@ -933,92 +1042,106 @@
           <p>家賃20万円以上の<br>高単価案件が<br>宙に浮いている</p>
         </div>
       </div>
+      <div class="pain-closing">
+        <p class="pain-closing-lead">仲介をやっていると必ず出会う案件。</p>
+        <p class="pain-closing-answer">これらを成約に導く仕組みを、弊社は提供しております。</p>
+      </div>
     </div>
   </div>
 
-  <!-- ========== SCHEME DIAGRAM ========== -->
-  <div class="diagram-section fade-up">
-    <div class="diagram-inner">
-      <div class="sec-label">Scheme</div>
-      <h2 class="sec-title">転貸スキームの仕組み</h2>
+  <!-- ========== MECHANISM ========== -->
+  <div class="mechanism-section fade-up">
+    <div class="mechanism-inner">
+      <div class="sec-label">Mechanism</div>
+      <h2 class="sec-title">なぜ弊社なら「話が通る」のか</h2>
+      <p class="mechanism-lead">弊社は単なる審査代行ではありません。「社宅代行」として法人契約を行うことで、<strong>個人の信用力に依存しない契約を実現</strong>します。</p>
 
-      <div class="diagram-wrap">
-        <svg viewBox="0 0 780 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Boxes -->
-          <rect x="0" y="100" width="180" height="120" rx="16" fill="#f7f6f3" stroke="#e0ded8" stroke-width="1.5"/>
-          <rect x="300" y="100" width="180" height="120" rx="16" fill="rgba(201,168,76,0.1)" stroke="#c9a84c" stroke-width="1.5"/>
-          <rect x="600" y="100" width="180" height="120" rx="16" fill="#f7f6f3" stroke="#e0ded8" stroke-width="1.5"/>
+      <!-- Diagram -->
+      <div class="mechanism-diagram-area">
+        <p class="mechanism-diagram-label">社宅代行型 転貸方式の仕組み</p>
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 780 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background highlight for center -->
+            <rect x="270" y="72" width="240" height="180" rx="20" fill="rgba(201,168,76,0.06)" stroke="rgba(201,168,76,0.2)" stroke-width="1.5"/>
 
-          <!-- Icons -->
-          <text x="90" y="148" text-anchor="middle" font-size="32">🏠</text>
-          <text x="390" y="148" text-anchor="middle" font-size="32">🏢</text>
-          <text x="690" y="148" text-anchor="middle" font-size="32">👤</text>
+            <!-- Left box: Owner -->
+            <rect x="16" y="108" width="180" height="130" rx="14" fill="#fff" stroke="#e0ded8" stroke-width="1.2"/>
+            <text x="106" y="138" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#888">貸主・管理会社</text>
+            <text x="106" y="165" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="17" font-weight="700" fill="#1a1a22">オーナー様</text>
+            <text x="106" y="215" text-anchor="middle" font-size="36">🏠</text>
 
-          <!-- Labels -->
-          <text x="90" y="180" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="700" fill="#1a1a22">貸主様</text>
-          <text x="90" y="200" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#888">（オーナー）</text>
-          <text x="390" y="175" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="700" fill="#1a1a22">Growth Property</text>
-          <text x="390" y="198" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#a88b3d">（マスターリース契約）</text>
-          <text x="690" y="180" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="700" fill="#1a1a22">入居者様</text>
-          <text x="690" y="200" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#888">（外国籍・個人事業主等）</text>
+            <!-- Center box: Growth Property -->
+            <text x="390" y="100" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#a88b3d" letter-spacing="0.05em">借主・転貸人</text>
+            <text x="390" y="136" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="20" font-weight="900" fill="#1a1a22">グロース</text>
+            <text x="390" y="164" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="20" font-weight="900" fill="#1a1a22">プロパティ</text>
+            <text x="390" y="210" text-anchor="middle" font-size="36">🛡️</text>
+            <text x="390" y="240" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="600" fill="#c9a84c">※弊社がリスク負担</text>
 
-          <!-- Arrows -->
-          <defs>
-            <marker id="arrowGold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#c9a84c"/>
-            </marker>
-            <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#bbb"/>
-            </marker>
-          </defs>
+            <!-- Right box: Tenant -->
+            <rect x="584" y="108" width="180" height="130" rx="14" fill="#fff" stroke="#e0ded8" stroke-width="1.2"/>
+            <text x="674" y="138" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#888">入居者</text>
+            <text x="674" y="165" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="17" font-weight="700" fill="#1a1a22">お客様</text>
+            <text x="674" y="215" text-anchor="middle" font-size="36">👤</text>
 
-          <!-- Top arrows - contracts -->
-          <line x1="185" y1="140" x2="295" y2="140" stroke="#c9a84c" stroke-width="2" marker-end="url(#arrowGold)"/>
-          <text x="240" y="128" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#a88b3d">賃貸借契約</text>
+            <!-- Arrow markers -->
+            <defs>
+              <marker id="arrowGold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#c9a84c"/>
+              </marker>
+              <marker id="arrowGoldL" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+                <polygon points="8 0, 0 3, 8 6" fill="#c9a84c"/>
+              </marker>
+            </defs>
 
-          <line x1="485" y1="140" x2="595" y2="140" stroke="#c9a84c" stroke-width="2" marker-end="url(#arrowGold)"/>
-          <text x="540" y="128" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#a88b3d">転貸借契約</text>
+            <!-- Left arrows (double-headed) -->
+            <line x1="200" y1="160" x2="268" y2="160" stroke="#c9a84c" stroke-width="2" marker-end="url(#arrowGold)" marker-start="url(#arrowGoldL)"/>
+            <!-- Contract label pill -->
+            <rect x="200" y="170" width="70" height="20" rx="4" fill="rgba(201,168,76,0.12)"/>
+            <text x="235" y="184" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="9" font-weight="600" fill="#a88b3d">マスターリース契約</text>
 
-          <!-- Bottom arrows - money -->
-          <line x1="295" y1="180" x2="185" y2="180" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrowGray)"/>
-          <text x="240" y="196" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#999">賃料支払い</text>
+            <!-- Right arrows (double-headed) -->
+            <line x1="512" y1="160" x2="580" y2="160" stroke="#c9a84c" stroke-width="2" marker-end="url(#arrowGold)" marker-start="url(#arrowGoldL)"/>
+            <!-- Contract label pill -->
+            <rect x="514" y="170" width="64" height="20" rx="4" fill="rgba(201,168,76,0.12)"/>
+            <text x="546" y="184" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="9" font-weight="600" fill="#a88b3d">サブリース契約</text>
 
-          <line x1="595" y1="180" x2="485" y2="180" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrowGray)"/>
-          <text x="540" y="196" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#999">賃料支払い</text>
+            <!-- Bottom: 仲介会社 -->
+            <rect x="250" y="280" width="280" height="48" rx="10" fill="#fff" stroke="#e0ded8" stroke-width="1"/>
+            <text x="390" y="310" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="#1a1a22">仲介会社様（貴社）</text>
 
-          <!-- 仲介会社 box (below) -->
-          <rect x="250" y="260" width="280" height="48" rx="10" fill="#fff" stroke="#e0ded8" stroke-width="1"/>
-          <text x="390" y="290" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="#1a1a22">仲介会社様（貴社）</text>
+            <!-- Dashed lines from 仲介 -->
+            <line x1="310" y1="280" x2="180" y2="240" stroke="#ddd" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="470" y1="280" x2="600" y2="240" stroke="#ddd" stroke-width="1" stroke-dasharray="3 3"/>
 
-          <!-- Dashed line from 仲介 to both sides -->
-          <line x1="310" y1="260" x2="200" y2="225" stroke="#ddd" stroke-width="1" stroke-dasharray="3 3"/>
-          <line x1="470" y1="260" x2="580" y2="225" stroke="#ddd" stroke-width="1" stroke-dasharray="3 3"/>
-
-          <!-- Badge -->
-          <rect x="290" y="235" width="200" height="22" rx="4" fill="rgba(201,168,76,0.12)"/>
-          <text x="390" y="250" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" font-weight="600" fill="#a88b3d">仲介手数料 100% 貴社へ</text>
-
-          <!-- Top label -->
-          <text x="390" y="70" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="600" fill="#666">社宅代行型マスターリース方式</text>
-          <line x1="240" y1="80" x2="540" y2="80" stroke="#e0ded8" stroke-width="1"/>
-        </svg>
+            <!-- 仲介手数料 badge -->
+            <rect x="290" y="256" width="200" height="22" rx="4" fill="rgba(201,168,76,0.12)"/>
+            <text x="390" y="271" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="10" font-weight="600" fill="#a88b3d">仲介手数料 100% 貴社へ</text>
+          </svg>
+        </div>
       </div>
 
-      <div class="diagram-notes stagger">
-        <div class="diagram-note">
-          <div class="diagram-note-icon">📋</div>
-          <strong>弊社が契約主体</strong>
-          <span>貸主様との契約は弊社が直接締結。入居者の属性リスクを弊社が引き受けます</span>
+      <!-- 3 key points -->
+      <div class="mechanism-points stagger">
+        <div class="mechanism-point">
+          <div class="mechanism-point-icon">📋</div>
+          <div>
+            <strong>弊社が契約主体になる</strong>
+            <p>貸主様との賃貸借契約は弊社が直接締結。入居者様の属性リスクを弊社が引き受けるため、管理会社が安心して承認できます。</p>
+          </div>
         </div>
-        <div class="diagram-note">
-          <div class="diagram-note-icon">🤝</div>
-          <strong>管理会社の枠組みはそのまま</strong>
-          <span>既存の管理会社・保証会社の関係性を壊しません</span>
+        <div class="mechanism-point">
+          <div class="mechanism-point-icon">🏛️</div>
+          <div>
+            <strong>「社宅代行」として説明できる</strong>
+            <p>市場規模2,500億円超の確立された業態。管理会社にとって聞き慣れた枠組みのため、転貸への心理的ハードルが大きく下がります。</p>
+          </div>
         </div>
-        <div class="diagram-note">
-          <div class="diagram-note-icon">🏛️</div>
-          <strong>市場規模2,500億円超の確立業態</strong>
-          <span>「社宅代行」として管理会社に説明するため、スムーズな合意形成が可能です</span>
+        <div class="mechanism-point">
+          <div class="mechanism-point-icon">🔒</div>
+          <div>
+            <strong>既存の関係性を壊さない</strong>
+            <p>管理会社・保証会社は既存のまま。貴社が築いてきたビジネス関係に一切影響を与えません。</p>
+          </div>
         </div>
       </div>
     </div>
