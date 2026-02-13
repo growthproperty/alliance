@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高単価案件レスキュー窓口｜不動産仲介会社様専用｜株式会社グロースプロパティ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #1a1a1f;
+      --ink-light: #3a3a42;
+      --ink-muted: #6b6b76;
+      --surface: #fafaf8;
+      --surface-warm: #f5f3ef;
+      --accent: #c5a55a;
+      --accent-dark: #a88b3d;
+      --accent-light: #e8d9a8;
+      --red-signal: #c44b3f;
+      --green-signal: #3a7d5c;
+      --green-bg: #eef6f1;
+      --border: #e2e0db;
+      --serif: 'Noto Serif JP', serif;
+      --sans: 'Noto Sans JP', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.8;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(197,165,90,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      border: 1px solid rgba(197,165,90,0.4);
+      padding: 6px 16px;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 .gold {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(14px, 2.2vw, 17px);
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+
+    .hero-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+
+    .hero-list li::before {
+      content: '×';
+      color: var(--red-signal);
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .hero-cta-area {
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-cta-text {
+      font-family: var(--serif);
+      font-size: clamp(17px, 2.8vw, 22px);
+      color: #fff;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .hero-cta-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 28px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .section-lead {
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.9;
+      max-width: 640px;
+    }
+
+    /* ===== ROUTE SECTION ===== */
+    .route-section {
+      background: var(--surface-warm);
+    }
+
+    .route-section .inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .route-block {
+      margin-top: 40px;
+      display: grid;
+      gap: 0;
+    }
+
+    .route-problem {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .route-problem p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--ink-light);
+    }
+
+    .route-problem strong {
+      color: var(--red-signal);
+    }
+
+    .route-arrow {
+      text-align: center;
+      font-size: 24px;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .route-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .route-steps { grid-template-columns: 1fr; }
+    }
+
+    .route-step {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+      position: relative;
+    }
+
+    .route-step-num {
+      font-family: var(--serif);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .route-step h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .route-step p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== MECHANISM ===== */
+    .mechanism-grid {
+      margin-top: 40px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .mechanism-card {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mechanism-card:last-child { border-bottom: none; }
+
+    .mechanism-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--surface-warm);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .mechanism-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .mechanism-card p {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.8;
+    }
+
+    /* ===== CASE STUDY ===== */
+    .case-section {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .case-section .inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .case-section .section-label { color: var(--accent-light); }
+    .case-section .section-title { color: #fff; }
+
+    .case-card {
+      margin-top: 36px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 36px;
+    }
+
+    .case-tag {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid rgba(197,165,90,0.3);
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .case-card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .case-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.85;
+    }
+
+    .case-result {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 15px;
+      color: var(--accent-light);
+      font-weight: 500;
+    }
+
+    /* ===== PROMISES ===== */
+    .promises-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .promises-grid { grid-template-columns: 1fr; }
+    }
+
+    .promise-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .promise-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .promise-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .promise-card p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.75;
+    }
+
+    /* ===== CONDITIONS ===== */
+    .conditions {
+      background: var(--surface-warm);
+    }
+
+    .conditions .inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .cond-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .cond-grid { grid-template-columns: 1fr; }
+    }
+
+    .cond-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .cond-item dt {
+      font-size: 12px;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .cond-item dd {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .cond-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .cta-section .inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px;
+      text-align: center;
+    }
+
+    .cta-section .section-title {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .cta-section .section-lead {
+      color: rgba(255,255,255,0.55);
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--ink);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(197,165,90,0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn-icon {
+      font-size: 18px;
+    }
+
+    /* ===== PERSONA CARDS ===== */
+    .persona-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .persona-grid { grid-template-columns: 1fr; }
+    }
+
+    .persona-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 24px;
+      transition: border-color 0.3s ease;
+    }
+
+    .persona-card:hover {
+      border-color: rgba(197,165,90,0.3);
+    }
+
+    .persona-card.featured {
+      background: rgba(197,165,90,0.06);
+      border-color: rgba(197,165,90,0.2);
+    }
+
+    .persona-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .persona-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .persona-header h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .persona-badge {
+      display: inline-block;
+      font-size: 10px;
+      color: var(--accent);
+      border: 1px solid rgba(197,165,90,0.35);
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-weight: 600;
+      margin-top: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .persona-profile {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .persona-ng {
+      font-size: 12px;
+      color: var(--red-signal);
+      font-weight: 500;
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .persona-ng::before {
+      content: '×';
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      background: #fff;
+    }
+
+    .faq-section .inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 32px;
+    }
+
+    .faq-list {
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 24px 40px 24px 0;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      position: relative;
+      line-height: 1.6;
+      display: flex;
+      gap: 12px;
+    }
+
+    .faq-question:hover {
+      color: var(--accent-dark);
+    }
+
+    .faq-q-label {
+      color: var(--accent-dark);
+      font-family: var(--serif);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 600px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 0 28px 36px;
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 2;
+    }
+
+    .faq-answer-inner strong {
+      color: var(--ink-light);
+      font-weight: 600;
+    }
+
+    .faq-sub-label {
+      font-size: 13px;
+      color: var(--ink-muted);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 40px 32px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-inner {
+        padding: 56px 20px 48px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero h1 br { display: none; }
+
+      .hero-sub {
+        margin-bottom: 32px;
+      }
+
+      .hero-list li {
+        font-size: 14px;
+      }
+
+      .hero-cta-area {
+        margin-top: 36px;
+        padding-top: 28px;
+      }
+
+      .hero-cta-text {
+        font-size: 18px;
+      }
+
+      .hero-cta-text br { display: none; }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 14px;
+      }
+
+      /* Sections */
+      section,
+      .route-section .inner,
+      .case-section .inner,
+      .conditions .inner,
+      .faq-section .inner,
+      .cta-section .inner {
+        padding: 56px 20px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+
+      .section-title br { display: none; }
+
+      /* Route */
+      .route-steps {
+        grid-template-columns: 1fr;
+      }
+
+      /* Mechanism */
+      .mechanism-card {
+        grid-template-columns: 44px 1fr;
+        gap: 14px;
+      }
+
+      .mechanism-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+
+      /* Persona */
+      .persona-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .persona-card {
+        padding: 20px;
+      }
+
+      /* Promises */
+      .promises-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .promise-card {
+        padding: 24px 20px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        align-items: start;
+      }
+
+      .promise-icon {
+        margin-bottom: 0;
+        font-size: 24px;
+        grid-row: 1 / 3;
+      }
+
+      .promise-card h4 {
+        margin-bottom: 4px;
+      }
+
+      .promise-card h4 br { display: none; }
+
+      .promise-card p {
+        grid-column: 2;
+      }
+
+      /* Conditions */
+      .cond-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      /* FAQ */
+      .faq-question {
+        padding: 20px 0;
+        gap: 10px;
+      }
+
+      .faq-question span:nth-child(2) {
+        font-size: 14px;
+      }
+
+      .faq-answer-inner {
+        padding: 0 0 20px 32px;
+        font-size: 13px;
+      }
+
+      /* CTA */
+      .cta-section .section-title {
+        font-size: 20px;
+      }
+
+      .cta-section .section-lead {
+        font-size: 14px;
+      }
+
+      .cta-section .section-lead br { display: none; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-inner {
+        padding: 44px 16px 40px;
+      }
+
+      .hero h1 {
+        font-size: 22px;
+      }
+
+      section,
+      .route-section .inner,
+      .case-section .inner,
+      .conditions .inner,
+      .faq-section .inner,
+      .cta-section .inner {
+        padding: 44px 16px;
+      }
+
+      .persona-header h4 {
+        font-size: 14px;
+      }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">不動産仲介会社様専用</div>
+      <h1>家賃20万円以上の審査否決案件を、<br><span class="gold">成約に変える。</span></h1>
+      <p class="hero-sub">高単価案件レスキュー窓口</p>
+
+      <p style="font-size:15px; color:rgba(255,255,255,0.75); margin-bottom:28px; font-weight:400;">
+        その案件、まだ終わっていません。
+      </p>
+
+      <ul class="hero-list">
+        <li>フリーランスで所得証明が弱く、審査NG</li>
+        <li>「外国籍」と伝えた瞬間、管理会社に断られた</li>
+        <li>過去に信用情報の事故歴があり、保証会社が通らない</li>
+        <li>家賃20万円以上の高単価案件が宙に浮いている</li>
+      </ul>
+
+      <div class="hero-cta-area">
+        <p class="hero-cta-text">弊社の「社宅代行×転貸スキーム」で、<br>審査通過の可能性を最大化します。</p>
+        <p class="hero-cta-desc">仲介手数料は100%貴社に帰属。貴社の案件を、貴社の成約にします。</p>
+        <div class="cta-buttons">
+          <a href="https://lin.ee/5vv7ViN" class="btn btn-primary" target="_blank"><span class="btn-icon">💬</span> 公式LINEで即時相談</a>
+          <a href="https://growth-property.jp/contact" class="btn btn-secondary" target="_blank">フォームから相談 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECOND ROUTE -->
+  <div class="route-section">
+    <div class="inner fade-up">
+      <div class="section-label">Approach</div>
+      <h2 class="section-title">審査に落ちてからでは遅い。<br>「第二のルート」という考え方</h2>
+
+      <div class="route-block">
+        <div class="route-problem">
+          <p>
+            通常ルートで審査をかけて否決されると、その物件での成約はほぼ不可能になります。
+            大切なのは、否決されてから動くことではなく、<strong>最初から通りやすいルートを選ぶ</strong>ことです。
+          </p>
+        </div>
+
+        <div class="route-arrow">↓</div>
+
+        <div class="route-steps">
+          <div class="route-step">
+            <div class="route-step-num">STEP 01</div>
+            <h4>事前確認</h4>
+            <p>通常の審査をかける前に、弊社スキームでの対応可否を確認。物件と入居者の情報をお送りいただくだけで完了します。</p>
+          </div>
+          <div class="route-step">
+            <div class="route-step-num">STEP 02</div>
+            <h4>戦略的な審査・交渉</h4>
+            <p>可能性が高い状態で管理会社への交渉に入ります。否決リスクを最小化した上でのアプローチです。</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:28px; font-size:15px; color:var(--ink-light); line-height:1.9;">
+        この二段階の検討ルートにより、これまで取りこぼしていた高単価案件の成約を手繰り寄せます。
+      </p>
+    </div>
+  </div>
+
+  <!-- MECHANISM -->
+  <section class="fade-up">
+    <div class="section-label">Mechanism</div>
+    <h2 class="section-title">なぜ弊社を通すと「話が通る」のか</h2>
+    <p class="section-lead">
+      弊社は単に審査を通す会社ではありません。物件を弊社名義で借り上げ、入居者様へ転貸する「社宅代行スキーム」を活用しています。
+    </p>
+
+    <div class="mechanism-grid">
+      <div class="mechanism-card">
+        <div class="mechanism-icon">🏢</div>
+        <div>
+          <h4>法人契約への切り替え</h4>
+          <p>個人では審査が通りにくい属性でも、法人契約として管理会社に提案します。社会的信用を法人が補完する形を取ることで、検討の土台に乗る確率が大きく変わります。</p>
+        </div>
+      </div>
+      <div class="mechanism-card">
+        <div class="mechanism-icon">🤝</div>
+        <div>
+          <h4>管理会社との関係性を壊さない</h4>
+          <p>既存の管理会社・保証会社の枠組みはそのまま。弊社がリスクを引き受ける構造のため、貴社と管理会社の関係性に影響を与えません。</p>
+        </div>
+      </div>
+      <div class="mechanism-card">
+        <div class="mechanism-icon">📋</div>
+        <div>
+          <h4>社宅代行として確立されたスキーム</h4>
+          <p>法人による社宅代行は、市場規模2,500億円超の確立された業態です。「転貸」ではなく「社宅代行」として管理会社に説明するため、スムーズな合意形成が可能です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONA TYPES -->
+  <div class="case-section">
+    <div class="inner fade-up">
+      <div class="section-label">Target</div>
+      <h2 class="section-title">こんなお客様、いませんか？</h2>
+      <p style="color:rgba(255,255,255,0.55); font-size:15px; margin-bottom:12px; line-height:1.8;">
+        収入や資産は十分。でも審査のロジックに合わない——<br>
+        そんな「与信だけが弱い層」は、想像以上に多く存在します。
+      </p>
+
+      <div class="persona-grid">
+
+        <!-- 優先4タイプ：featured -->
+        <div class="persona-card featured">
+          <div class="persona-header">
+            <span class="persona-icon">🌏</span>
+            <div>
+              <h4>外国籍のホワイトカラー</h4>
+              <span class="persona-badge">相談件数 多</span>
+            </div>
+          </div>
+          <p class="persona-profile">外資系勤務、年収1,000万円以上。就労ビザで来日して間もなく、日本での信用履歴がほぼゼロ。</p>
+          <p class="persona-ng">永住権なし・信用情報なしで保証会社NG</p>
+        </div>
+
+        <div class="persona-card featured">
+          <div class="persona-header">
+            <span class="persona-icon">💻</span>
+            <div>
+              <h4>高所得フリーランス</h4>
+              <span class="persona-badge">相談件数 多</span>
+            </div>
+          </div>
+          <p class="persona-profile">ITエンジニア、デザイナー、動画クリエイターなど。年収800万〜3,000万円だが、確定申告で利益を圧縮している。</p>
+          <p class="persona-ng">「会社員ではない」だけで収入安定性を疑われNG</p>
+        </div>
+
+        <div class="persona-card featured">
+          <div class="persona-header">
+            <span class="persona-icon">🚀</span>
+            <div>
+              <h4>スタートアップ経営者</h4>
+              <span class="persona-badge">相談件数 多</span>
+            </div>
+          </div>
+          <p class="persona-profile">創業3年未満で資金調達済み。実態は成長企業だが、役員報酬を低く設定しているため個人の所得が低く見える。</p>
+          <p class="persona-ng">法人赤字・代表の給与が低いため審査NG</p>
+        </div>
+
+        <div class="persona-card featured">
+          <div class="persona-header">
+            <span class="persona-icon">📈</span>
+            <div>
+              <h4>投資家（不動産・株・暗号資産）</h4>
+              <span class="persona-badge">相談件数 多</span>
+            </div>
+          </div>
+          <p class="persona-profile">資産数億円規模だが給与所得はゼロ。キャッシュフローは潤沢でも、確定申告上は低所得に見える。</p>
+          <p class="persona-ng">「給与収入がない」ことで保証会社が即NG</p>
+        </div>
+
+        <!-- その他タイプ -->
+        <div class="persona-card">
+          <div class="persona-header">
+            <span class="persona-icon">🌐</span>
+            <div><h4>海外法人の経営者</h4></div>
+          </div>
+          <p class="persona-profile">本国では富裕層。日本に拠点を構えたいが、国内の所得履歴も信用情報もない。</p>
+          <p class="persona-ng">日本基準の収入証明が出せずNG</p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-header">
+            <span class="persona-icon">🎬</span>
+            <div><h4>YouTuber・インフルエンサー</h4></div>
+          </div>
+          <p class="persona-profile">月収200万〜1,000万円の広告収入。実態は高所得だが、職業イメージと収入の波で審査が通りにくい。</p>
+          <p class="persona-ng">不安定収入扱い＋職業イメージでNG</p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-header">
+            <span class="persona-icon">🏥</span>
+            <div><h4>医師・士業の独立直後</h4></div>
+          </div>
+          <p class="persona-profile">将来性は確実だが、開業1年未満で実績がまだ出ていない。前年度の確定申告書も提出できない。</p>
+          <p class="persona-ng">開業初期で実績不足と判断されNG</p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-header">
+            <span class="persona-icon">⚠️</span>
+            <div><h4>過去に信用事故歴がある富裕層</h4></div>
+          </div>
+          <p class="persona-profile">現在の資産は十分。しかし過去のカード事故や延滞が信用情報に残っていて、機械的に弾かれる。</p>
+          <p class="persona-ng">信用情報で自動NG（資産額は考慮されない）</p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-header">
+            <span class="persona-icon">🗾</span>
+            <div><h4>帰国子女・海外在住歴の長い日本人</h4></div>
+          </div>
+          <p class="persona-profile">海外で高収入を得ていたが、日本での納税履歴が薄い。帰国直後の住居探しで審査に苦戦する。</p>
+          <p class="persona-ng">国内での信用不足でNG</p>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-header">
+            <span class="persona-icon">✈️</span>
+            <div><h4>海外在住・高頻度で来日する方</h4></div>
+          </div>
+          <p class="persona-profile">パイロット、外資系コンサルタントなど。海外拠点だが職業柄来日頻度が高く、東京に拠点を持ちたい。</p>
+          <p class="persona-ng">永住権なし・信用情報なしで保証会社NG</p>
+        </div>
+
+      </div>
+
+      <p style="color:rgba(255,255,255,0.45); font-size:13px; margin-top:32px; text-align:center;">
+        共通点：保証会社は「資産額」ではなく給与所得や属性など形式要件を重視するため審査に通らない
+      </p>
+    </div>
+  </div>
+
+  <!-- PROMISES -->
+  <section class="fade-up">
+    <div class="section-label">Promise</div>
+    <h2 class="section-title">仲介会社様への3つの約束</h2>
+
+    <div class="promises-grid">
+      <div class="promise-card">
+        <div class="promise-icon">💰</div>
+        <h4>仲介手数料は<br>100%貴社に帰属</h4>
+        <p>弊社が仲介ポジションを奪うことは一切ありません。貴社の案件は、貴社の成約です。</p>
+      </div>
+      <div class="promise-card">
+        <div class="promise-icon">🔒</div>
+        <h4>管理会社・保証会社は<br>既存のまま</h4>
+        <p>貴社が築いてきた取引先との関係を壊さず、成約のみをサポートします。</p>
+      </div>
+      <div class="promise-card">
+        <div class="promise-icon">⚡</div>
+        <h4>24時間以内の<br>スピード回答</h4>
+        <p>現場のスピード感を削ぎません。担当からすぐに対応いたします。</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONDITIONS -->
+  <div class="conditions">
+    <div class="inner fade-up">
+      <div class="section-label">Conditions</div>
+      <h2 class="section-title">対応条件</h2>
+
+      <div class="cond-grid">
+        <div class="cond-item">
+          <dl>
+            <dt>対応エリア</dt>
+            <dd>東京都内</dd>
+          </dl>
+        </div>
+        <div class="cond-item">
+          <dl>
+            <dt>家賃帯</dt>
+            <dd>20万円以上</dd>
+          </dl>
+        </div>
+        <div class="cond-item">
+          <dl>
+            <dt>レスポンス</dt>
+            <dd>24時間以内</dd>
+          </dl>
+        </div>
+      </div>
+
+      <p class="cond-note">※ 水商売の方、反社会的勢力に関わる方のご案件は対応しておりません。</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="inner fade-up">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">仲介会社様向け Q&A</h2>
+      <p class="faq-sub-label">― 社宅代行型転貸方式について ―</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q1.</span>
+            <span>どのような仕組みですか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              弊社は<strong>「社宅代行型の転貸方式（マスターリース方式）」</strong>を採用しております。<br><br>
+              ① 貸主様と弊社にて賃貸借契約（マスターリース契約）を締結します。<br>
+              ② 貸主様の承諾を前提として、弊社と入居者（外国籍・フリーランス富裕層等）との間で賃貸借契約（サブリース契約）を締結します。<br>
+              ③ 入退去手続き・契約更新・日常的なご案内等は、弊社が入居者へ直接行います。<br><br>
+              仲介会社様には、通常通り弊社を契約主体としてご仲介いただきます。<br>
+              ※無断転貸は一切行いません。必ず貸主様の承諾を前提に進めます。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q2.</span>
+            <span>転貸は難しいのでは？管理会社が嫌がりませんか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              物件や管理会社の方針によります。一律で「転貸不可」としている物件もありますが、事前説明・契約内容の明確化・与信の提示・入居者属性の開示を行うことで、ご相談可能なケースも多くあります。<br><br>
+              弊社では必ず<strong>事前調整を前提</strong>として案件を進めます。仲介会社様に過度なご負担がかからない形で対応いたします。<br>
+              大手管理会社物件でも、転貸可能な事例は多数ございます。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q3.</span>
+            <span>仲介手数料はどうなりますか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              マスターリース契約・サブリース契約それぞれにおいて、媒介業務を行っていただいた場合は、<strong>通常の仲介手数料をお支払い（または入居者様より受領）いただく形</strong>となります。<br><br>
+              具体的なスキームは案件ごとにご説明いたします。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q4.</span>
+            <span>御社はどこで利益を出しているのですか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              弊社は転貸契約における<strong>賃料設計（利鞘）</strong>により収益を確保しております。<br>
+              仲介会社様の仲介手数料とは独立した形で収益設計を行っておりますので、貴社の利益を圧迫することはありません。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q5.</span>
+            <span>家賃100万円以上の物件でも対応可能ですか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <strong>対応可能です。</strong><br>
+              弊社単体の与信で難しい場合でも、弊社グループ会社の与信も活用しながら、100万円超の高額賃貸についても対応いたします。<br><br>
+              物件条件・管理会社方針により可否は異なりますので、まずは案件ベースでご相談ください。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q6.</span>
+            <span>保証会社はどうなりますか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              案件ごとに最適な方法を選択しております。保証会社利用・管理会社との直接協議・与信提示による調整など、柔軟に対応いたします。<br><br>
+              入居者と弊社の間では、<strong>Casa・日本セーフティー・フォーシーズ・GTN</strong>等の独立系保証会社を活用しております。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q7.</span>
+            <span>どのような案件が対象ですか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              以下のようなケースが対象となります。<br><br>
+              ・外国籍で高年収だが日本での信用履歴が浅い<br>
+              ・フリーランスで所得は高いが保証会社NG<br>
+              ・法人代表で個人与信が弱い<br>
+              ・家賃20万円以上の高単価帯<br><br>
+              ※夜職案件は現在対応しておりません。
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span class="faq-q-label">Q8.</span>
+            <span>まずは相談だけでも可能ですか？</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <strong>もちろん可能です。</strong><br>
+              正式なご紹介前でも、「この条件でいけそうですか？」といった事前確認レベルのご相談も歓迎しております。
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section" id="contact">
+    <div class="inner fade-up">
+      <div class="section-label" style="color:var(--accent-light);">Contact</div>
+      <h2 class="section-title">「通りにくいかもしれない」<br>そう思った段階で、ご相談ください。</h2>
+      <p class="section-lead">
+        審査を出す前のご相談が、成約率を大きく変えます。<br>
+        物件情報と入居者様の属性をお送りいただければ、24時間以内にご対応いたします。
+      </p>
+
+      <div class="cta-buttons">
+        <a href="https://lin.ee/5vv7ViN" class="btn btn-primary" target="_blank"><span class="btn-icon">💬</span> 公式LINEで即時相談</a>
+        <a href="https://growth-property.jp/contact" class="btn btn-secondary" target="_blank">フォームから相談 →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 株式会社グロースプロパティ ｜ <a href="https://growth-property.jp">growth-property.jp</a></p>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
